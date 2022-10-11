@@ -4,5 +4,8 @@
 # Bytecode
 *.pyc
 
+# Database
+db.sqlite3
+
 # Libraries
 venv/
