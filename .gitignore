@@ -1,0 +1,8 @@
+# IDE settings
+.idea/
+
+# Bytecode
+*.pyc
+
+# Libraries
+venv/
