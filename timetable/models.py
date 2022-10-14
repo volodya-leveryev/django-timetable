@@ -1,25 +1,26 @@
 from django.db.models import Model, CharField, DateField
 
 
-class StudentGroup(Model):
-    """ Учебная группа """
+class StudyGroup(Model):
 
-    name = CharField('название', max_length=50)
+    name = CharField("название", max_length=50)
 
     class Meta:
-        verbose_name = 'учебная группа'
-        verbose_name_plural = 'учебные группы'
+        verbose_name = "учебная группа"
+        verbose_name_plural = "учебные группы"
+
+    def __str__(self):
+        return f"{self.name}"
 
 
 class Semester(Model):
-    """ Семестр """
 
-    start = DateField('дата начала')
-    finish = DateField('дата окончания')
+    start = DateField("дата начала")
+    finish = DateField("дата окончания")
 
     class Meta:
-        verbose_name = 'семестр'
-        verbose_name_plural = 'семестры'
+        verbose_name = "семестр"
+        verbose_name_plural = "семестры"
 
     # def __str__(self):
     #     return f"{self.}"
