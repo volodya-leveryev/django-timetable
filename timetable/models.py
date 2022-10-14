@@ -1,4 +1,4 @@
-from django.db.models import Model, CharField, DateField
+from django.db.models import CharField, DateField, Model
 
 
 class StudyGroup(Model):
