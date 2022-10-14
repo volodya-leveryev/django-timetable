@@ -85,20 +85,16 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
-]
+passwd_validator = "django.contrib.auth.password_validation"
+AUTH_PASSWORD_VALIDATORS = [{
+    "NAME": passwd_validator + ".UserAttributeSimilarityValidator",
+}, {
+    "NAME": passwd_validator + ".MinimumLengthValidator",
+}, {
+    "NAME": passwd_validator + ".CommonPasswordValidator",
+}, {
+    "NAME": passwd_validator + ".NumericPasswordValidator",
+}]
 
 
 # Internationalization
